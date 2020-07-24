@@ -1,0 +1,33 @@
+{
+    "ReRoutes": [
+        {
+            "DownstreamPathTemplate": "/api/User/GetUser",
+            "DownstreamScheme": "http",
+            "ServiceName": "User",
+            "SwaggerKey": "User",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": "49763"
+                }
+            ],
+            "RouteIsCaseSensitive": false,
+            "UpstreamPathTemplate": "/user-api/user"
+        }
+    ],
+    "SwaggerEndPoints": [
+        {
+            "Key": "User",
+            "Config": [
+                {
+                    "Name": "User API",
+                    "Version": "v1",
+                    "Url": "http://localhost:49763/swagger/swagger.json"
+                }
+            ]
+        }
+    ],
+    "GlobalConfiguration": {
+        "BaseUrl": "http://localhost:52213"
+    }
+}
